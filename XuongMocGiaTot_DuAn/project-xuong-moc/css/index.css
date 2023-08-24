@@ -182,16 +182,29 @@ main .container .highlight .highlight-list .highlight-item {
 }
 
 .arrow-btn {
-    width: 5%;
+    width: 2.5rem;
+    height: 2.2rem;
     background-color: #bd945f;
-    font-size: 2rem;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-btn:hover {
+    background-color: #9e6e30;
 }
 
 .arrow-btn i {
     color: #fff;
+    font-size: .9rem;
+}
+
+.arrow-btn:hover i {
+    color: #bbb4b4;
+    font-weight: bold;
 }
 
 main .container .highlight .highlight-list .highlight-item a img {
@@ -411,7 +424,6 @@ main .news .container .news-img .img-title {
     padding: 2rem;
     position: absolute;
     bottom: 0;
-    width:
 }
 
 main .news .container .news-img .img-title h3 {
@@ -489,6 +501,7 @@ main .contact .container {
     display: flex;
     padding: 5rem;
     justify-content: space-around;
+    position: relative;
 }
 
 main .contact .container .title {
@@ -496,6 +509,8 @@ main .contact .container .title {
     font-family: 'font-ultra';
     font-size: 1.5rem;
     color: #fff;
+    margin-left: 5rem;
+    font-size: 3rem;
 }
 
 main .contact .container .title h3 {
@@ -526,6 +541,13 @@ main .contact .container .form .input button {
     margin-left: 1rem;
     padding: 0.8rem 2rem;
     border: none;
+}
+
+.contact-img {
+    position: absolute;
+    width: 15%;
+    left: 3%;
+    top: -30%;
 }
 
 /* footer */
