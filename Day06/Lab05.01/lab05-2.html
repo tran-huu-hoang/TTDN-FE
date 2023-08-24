@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form">
+        <label for="">Enter name:</label><br>
+        <input type="text" name="name"><br>
+        <label for="">Enter age:</label><br>
+        <input type="number" name="age"><br>
+        <input type="button" value="Check" onclick="check()">
+        <input type="reset" value="Clear">
+    </form>
+
+    <script>
+        const check = () => {
+            if (form.age.value < 18) {
+                alert("FBI. OPEN UP!!!");
+            }
+            else {
+                alert("You pass, " + form.name.value);
+            }
+        }
+    </script>
+</body>
+
+</html>

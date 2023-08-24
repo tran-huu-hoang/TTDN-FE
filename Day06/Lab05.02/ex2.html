@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var so_a = prompt("Nhập số a: ");
+        var so_b = prompt("Nhập số b: ");
+        var so_c = prompt("Nhập số c: ");
+
+        const gptb1 = (b, c) => {
+            if (b == 0) {
+                if (c == 0) {
+                    document.writeln("Phương trình có vô số nghiệm!");
+                    console.log("fasfasfafs");
+                }
+                else {
+                    document.writeln("Phương trình vô nghiệm!");
+                }
+            }
+            else {
+                var x = -c / b;
+                document.writeln("Phương trình có nghiệm là: " + x);
+            }
+        }
+
+        const gptb2 = (a, b, c) => {
+            var delta = b * b - (4 * a * c);
+            if (delta < 0) {
+                document.writeln("Phương trình vô nghiệm!");
+            }
+            else if (delta == 0) {
+                var x = -b / (2 * a);
+                document.writeln("Phương trình có nghiệm kép: " + x);
+            }
+            else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.writeln("Phương trình có 2 nghiệm phân biệt là: " + x1 + " và " + x2);
+            }
+        }
+
+        if (so_a == 0) {
+            gptb1(so_b, so_c);
+        }
+        else {
+            gptb2(so_a, so_b, so_c);
+        }
+    </script>
+</body>
+
+</html>
