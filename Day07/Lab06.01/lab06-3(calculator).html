@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .color {
+        background-color: #ccc;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div style="width:400px; height: 300px; margin: 100px auto;">
+        <table border="1" style="width:100%; height: 100%;">
+            <tr>
+                <td colspan="4">
+                    <input style="width:100%; height: 100%;" type="button" name="display" id="display">
+                </td>
+            </tr>
+
+            <tr>
+                <td><input class="color" type="button" id="num1" value="1" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="num2" value="2" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="num3" value="3" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="cong" value="+" onclick="pheptoan(this.value)"></td>
+            </tr>
+
+            <tr>
+                <td><input class="color" type="button" id="num4" value="4" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="num5" value="5" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="num6" value="6" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="tru" value="-" onclick="pheptoan(this.value)"></td>
+            </tr>
+
+            <tr>
+                <td><input class="color" type="button" id="num7" value="7" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="num8" value="8" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="num9" value="9" onclick="getValue(this.value)"></td>
+                <td><input class="color" type="button" id="nhan" value="*" onclick="pheptoan(this.value)"></td>
+            </tr>
+
+            <tr>
+                <td><input class="color" type="button" id="ac" value="AC" onclick="reset()"></td>
+                <td colspan="2"><input class="color" type="button" id="euqal" value="=" onclick="ketqua()"></td>
+                <td><input class="color" type="button" id="chia" value="/" onclick="pheptoan(this.value)"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var number = "";
+        var pheptinh = "";
+
+        const getValue = (val) => {
+            var dis = document.querySelector("#display").value;
+
+            document.querySelector("#display").value = dis + "" + val;
+        }
+
+        const pheptoan = (val) => {
+            number = document.querySelector("#display").value;
+
+            document.querySelector("#display").value = "";
+            pheptinh = val;
+        }
+
+        const reset = () => {
+            number = "";
+            pheptinh = "";
+            document.querySelector("#display").value = "";
+        }
+
+        const ketqua = () => {
+            var ketQua = 0;
+            switch (pheptinh) {
+                case "+":
+                    ketQua = parseInt(number) + parseInt(document.querySelector("#display").value);
+                    break;
+                case "-":
+                    ketQua = parseInt(number) - parseInt(document.querySelector("#display").value);
+                    break;
+                case "*":
+                    ketQua = parseInt(number) * parseInt(document.querySelector("#display").value);
+                    break;
+                case "/":
+                    ketQua = parseInt(number) / parseInt(document.querySelector("#display").value);
+                    break;
+            }
+            document.querySelector("#display").value = ketQua;
+        }
+    </script>
+</body>
+
+</html>

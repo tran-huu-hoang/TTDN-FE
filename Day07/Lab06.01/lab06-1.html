@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table style="width: 500px; margin: auto;">
+            <caption>
+                <h2>Login</h2>
+            </caption>
+
+            <tr>
+                <td>User name</td>
+                <td><input type="text" name="username" id="username" placeholder="Nhập tài khoản"></td>
+            </tr>
+
+            <tr>
+                <td>Pass word</td>
+                <td><input type="password" name="password" id="password" placeholder="Nhập mật khẩu"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="button" name="login" onclick="checkLogin()" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        var userName = document.querySelector('#username');
+        var passWord = document.querySelector('#password');
+
+        const checkLogin = () => {
+            if (userName.value == "") {
+                alert("Bạn chưa nhập tài khoản!")
+                userName.focus();
+            }
+            else if (passWord.value == "") {
+                alert("Bạn chưa nhập mật khẩu!")
+                passWord.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>

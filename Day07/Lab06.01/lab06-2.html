@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+<body>
+    <form action="">
+        <table style="width: 500px; margin: auto;">
+            <caption>
+                <h2>Login</h2>
+            </caption>
+
+            <tr>
+                <td>User name</td>
+                <td>
+                    <input type="text" name="username" id="username" placeholder="Nhập tài khoản"><br>
+                    <label for="" id="txtUserNameError"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Pass word</td>
+                <td>
+                    <input type="password" name="password" id="password" placeholder="Nhập mật khẩu"><br>
+                    <label for="" id="txtPassWordError"></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="button" name="login" onclick="checkLogin()" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        // var userName = document.querySelector('#username');
+        // var passWord = document.querySelector('#password');
+
+        var userName = document.getElementById('username')
+        var passWord = document.getElementById('password')
+
+        const checkLogin = () => {
+            if (userName.value == "") {
+                document.querySelector('#txtUserNameError').innerHTML = "Bạn chưa nhập tài khoản";
+                document.querySelector('#txtUserNameError').className = "error";
+                userName.focus();
+            }
+            else {
+                document.querySelector('#txtUserNameError').innerHTML = "";
+            }
+
+            if (passWord.value == "") {
+                document.querySelector('#txtPassWordError').innerHTML = "Bạn chưa nhập mật khẩu";
+                document.querySelector('#txtPassWordError').className = "error";
+                passWord.focus();
+            }
+            else {
+                document.querySelector('#txtPassWordError').innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

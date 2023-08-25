@@ -41,7 +41,7 @@ header nav .menu li {
     position: relative;
 }
 
-header nav .menu li:first-child:after {
+.selected:after {
     content: "";
     position: absolute;
     left: 0;
