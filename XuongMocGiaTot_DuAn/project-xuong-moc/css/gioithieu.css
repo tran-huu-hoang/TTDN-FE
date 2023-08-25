@@ -110,7 +110,7 @@ main .content .container {
     justify-content: space-around;
 }
 
-.title {
+main .title {
     position: relative;
     text-align: center;
     font-family: 'font-ultra';
@@ -118,7 +118,7 @@ main .content .container {
     color: #2c2e53;
 }
 
-.title::after {
+main .title::after {
     content: "";
     position: absolute;
     background-color: #bd945f;
