@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
@@ -22,13 +27,14 @@
             </div>
 
             <ul class="menu">
-                <li class="menu__item selected"><a href="../view/index.html">Trang chủ</a></li>
-                <li class="menu__item"><a href="../view/gioithieu.html">Giới thiệu</a></li>
-                <li class="menu__item"><a href="#">Sản phẩm</a></li>
-                <li class="menu__item"><a href="#">Tin tức</a></li>
-                <li class="menu__item"><a href="#">Đối tác</a></li>
-                <li class="menu__item"><a href="#">Liên hệ</a></li>
+                <li class="menu__item selected"><a href="../view/index.html">TRANG CHỦ</a></li>
+                <li class="menu__item"><a href="../view/gioithieu.html">GIỚI THIỆU</a></li>
+                <li class="menu__item"><a href="#">SẢN PHẨM</a></li>
+                <li class="menu__item"><a href="#">TIN TỨC</a></li>
+                <li class="menu__item"><a href="#">ĐỐI TÁC</a></li>
+                <li class="menu__item"><a href="#">LIÊN HỆ</a></li>
             </ul>
+            <i class="fa-solid fa-bars" style="display: none;" onclick="handleClickMenu()"></i>
         </nav>
     </header>
     <!-- END: head -->
@@ -94,9 +100,58 @@
                         SẢN PHẨM NỔI BẬT
                     </h1>
 
-                    <ul class="highlight-list">
-                        <li class="arrow-btn">
-                            <i class="fa-solid fa-chevron-left"></i>
+                    <ul class="highlight-list autoplay" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+                        <li class="highlight-item">
+                            <a href="">
+                                <img src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="highlight-item">
+                            <a href="">
+                                <img src="../images/san-pham-noi-bat/sp-2.jpg" alt="">
+                                <h3>BÀN LÀM VIỆC</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size vừa, trắng nâu)</p>
+                                <p>10.999.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="highlight-item">
+                            <a href="">
+                                <img src="../images/san-pham-noi-bat/sp-3.jpg" alt="">
+                                <h3>TỦ QUẦN ÁO</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(4 ngăn, trắng gỗ)</p>
+                                <p>12.799.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="highlight-item">
+                            <a href="">
+                                <img src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
+                                <h3>KỆ ĐỂ ĐỒ</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(4 ngăn, trắng gỗ)</p>
+                                <p>9.799.000 VNĐ</p>
+                            </a>
                         </li>
                         <li class="highlight-item">
                             <a href="">
@@ -150,16 +205,13 @@
                                 <p>9.799.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="arrow-btn">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </li>
                     </ul>
                 </div>
             </div>
         </section>
         <!-- END: product -->
 
-        <!-- BEGIN: aabout-us -->
+        <!-- BEGIN: about-us -->
         <section class="about-us">
             <div class="container">
                 <h1 class="title">VỀ CHÚNG TÔI</h1>
@@ -232,7 +284,7 @@
                 </div>
             </div>
         </section>
-        <!-- END: aabout-us -->
+        <!-- END: about-us -->
 
         <!-- BEGINnews -->
         <section class="news">
@@ -379,6 +431,26 @@
         </div>
     </footer>
     <!-- END: footer -->
+
+    <!-- slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slide-product').slick();
+            $('.autoplay').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+
+        const handleClickMenu = () => {
+            document.querySelector('.menu').classList.toggle('response-menu');
+        }
+    </script>
 </body>
 
 </html>
