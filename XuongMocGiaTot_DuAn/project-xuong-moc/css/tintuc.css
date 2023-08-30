@@ -65,118 +65,88 @@ header nav .menu li:hover::after {
 
 }
 
-/* main */
+
+/* main  */
 
 main {
     background-color: #f3f3f3;
 }
 
-main .banner {
-    width: 100%;
-}
-
-main .banner .container .banner-img {
-    width: 100%;
-    position: relative;
-}
-
-main .banner .container .banner-img img {
-    width: 100%;
-}
-
-main .banner .container .banner-img .banner-content {
-    position: absolute;
-    left: 60%;
-    top: 20%;
-}
-
-main .banner .container .banner-img .banner-content h2 {
-    color: #2c2e53;
-    font-size: 3rem;
-    font-weight: 100;
-}
-
-main .banner .container .banner-img .banner-content button {
-    color: #2c2e53;
-    border: none;
-    padding: 0.5rem 2rem;
-    margin-top: 1rem;
-    float: right;
-}
-
-main .menu .container {
+main .container {
     width: calc(12*100%/18);
-    margin: auto;
-}
-
-main .menu .container .product {
+    margin: 3rem auto;
     background-color: #fff;
-    padding: 3rem 0;
-    margin: 4rem 0;
+    padding: 2rem;
 }
 
-main .menu .product .product-heading {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-main .menu .container .title {
+main .container .title {
     position: relative;
+    text-align: center;
     font-family: 'font-ultra';
     font-size: 1.5rem;
     color: #2c2e53;
-    margin: 0 1rem;
+    margin: 1rem 0 3rem 0;
 }
 
-main .menu .container .product-heading__link {
-    margin: 0 1rem;
-}
-
-main .menu .container .title::after {
+main .container .title::after {
     content: "";
     position: absolute;
     background-color: #bd945f;
-    left: 0;
+    left: 44%;
     right: 44%;
     height: 0.4rem;
     bottom: -0.4rem;
 }
 
-main .menu .container .product-list {
-    width: 90%;
+main .container .box {
     display: flex;
-    align-items: center;
-    margin: auto;
+    flex-wrap: wrap;
 }
 
-main .menu .container .product-list .product-item {
-    width: calc(90%/4);
-    margin: 2.5rem 1rem 0 1rem;
-    text-align: center;
+main .container .box .product {
+    width: calc(100%/3);
+    margin-bottom: 3rem;
 }
 
-main .menu .container .product-list .product-item a img {
-    width: 100%;
+main .container .box .product img {
+    width: 90%;
+    margin: 0 5%;
 }
 
-main .menu .container .product-list .product-item a i {
+main .container .box .product .product-content {
+    width: 90%;
+    margin: 0 5%;
+}
+
+main .container .box .product .product-content h3 {
     color: #bd945f;
-}
-
-main .menu .container .product-list .product-item a h3,
-main .menu .container .product-list .product-item a p {
-    text-align: center;
-    line-height: 1.5rem;
-}
-
-main .menu .container .product-list .product-item a h3 {
     font-family: 'font-ultra';
-    color: #2c2e53;
-    margin-top: 0.5rem;
+    margin: 1rem 0;
 }
 
+main .container .box .product .product-content p {
+    font-size: 0.8rem;
+}
+
+main .container .page-number {
+    display: flex;
+    justify-content: center;
+}
+
+main .container .page-number .page-number__item {
+    background-color: #ccc;
+    color: #fff;
+    width: 1.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+main .container .page-number .page-number__item:hover {
+    background-color: #bd945f;
+    color: #000;
+}
 
 
 
@@ -257,7 +227,6 @@ footer .contact ul li:last-child div {
     header nav .menu {
         width: calc(9*100%/12);
     }
-
 }
 
 /* // Medium devices (tablets, less than 992px) */
@@ -342,15 +311,8 @@ footer .contact ul li:last-child div {
         }
     }
 
-
-    /* main  */
-
-    main .banner .container .banner-img .banner-content h2 {
-        font-size: 2rem;
-    }
-
-
     /* footer */
+
     main .contact .container {
         padding: 3rem 5rem;
     }
@@ -362,37 +324,15 @@ footer .contact ul li:last-child div {
         font-size: 12px;
     }
 
-    /* main  */
-
-    main .container {
-        width: 100%;
-    }
-
-    main .menu .container .product-list {
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
-
-    main .menu .container .product-list .product-item {
+    main .container .box .product {
         width: 50%;
-        margin: 1rem 0;
-    }
-
-    main .menu .container .product-list .product-item a img {
-        width: 90%;
     }
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
-    /* main  */
-
-    main .banner .container .banner-img .banner-content h2 {
-        font-size: 1.5rem;
-    }
-
-    main .menu .container .product-list .product-item {
+    main .container .box .product {
         width: 100%;
     }
 

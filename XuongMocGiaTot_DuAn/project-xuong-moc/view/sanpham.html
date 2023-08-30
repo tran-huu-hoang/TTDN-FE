@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sản phẩm</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -15,7 +15,7 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/sanpham.css">
 </head>
 
 <body>
@@ -28,82 +28,114 @@
             </div>
 
             <ul class="menu">
-                <li class="menu__item selected"><a href="../view/index.html">TRANG CHỦ</a></li>
+                <li class="menu__item"><a href="../view/index.html">TRANG CHỦ</a></li>
                 <li class="menu__item"><a href="../view/gioithieu.html">GIỚI THIỆU</a></li>
-                <li class="menu__item"><a href="#">SẢN PHẨM</a></li>
-                <li class="menu__item"><a href="#">TIN TỨC</a></li>
-                <li class="menu__item"><a href="#">ĐỐI TÁC</a></li>
+                <li class="menu__item selected"><a href="../view/sanpham.html">SẢN PHẨM</a></li>
+                <li class="menu__item"><a href="../view/tintuc.html">TIN TỨC</a></li>
+                <li class="menu__item"><a href="../view/doitac.html">ĐỐI TÁC</a></li>
                 <li class="menu__item"><a href="#">LIÊN HỆ</a></li>
             </ul>
         </nav>
     </header>
     <!-- END: head -->
 
+    <!-- BEGIN: main -->
     <main>
-        <!-- BEGIN: banner -->
         <section class="banner">
             <div class="container">
                 <div class="banner-img">
-                    <img src="../images/banner.png" alt="">
-                </div>
-                <div class="introduction">
-                    <h1 style="color: #2c2e53">THẾ GIỚI NỘI THẤT SỐ 1 VIỆT NAM</h1>
-                    <h1 style="color: #bd945f">HOÀNG HOAN</h1>
-                    <p>Được biết đến như một vị tướng sinh ra không đúng thời, Yasuo mang cho mình sức mạnh vô song. Tuy
-                        nhiên vị tướng này lại vô tình trở thành hot pick cho những thanh niên trẻ trâu đúng nghĩa.</p>
-                    <button>LIÊN HỆ NGAY</button>
+                    <img src="../images/san-pham/san-pham-main.png" alt="">
+                    <div class="banner-content">
+                        <h2 style="color: #bd945f;">Trải nghiệm</h2>
+                        <h2>không gian hiện đại</h2>
+                        <button>Mua ngay</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- END: banner -->
 
-        <!-- BEGIN: product -->
-        <section class="product">
+        <section class="menu">
             <div class="container">
-                <div class="category">
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-phong-khach.png" alt="">
-                        <p>Phòng khách</p>
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            PHÒNG KHÁCH
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
                     </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-phong-ngu.png" alt="">
-                        <p>Phòng ngủ</p>
-                    </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-phong-bep.png" alt="">
-                        <p>Phòng bếp</p>
-                    </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-phong-tam.png" alt="">
-                        <p>Phòng tắm</p>
-                    </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-tre-em.png" alt="">
-                        <p>Trẻ em</p>
-                    </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-van-phong.png" alt="">
-                        <p>Văn phòng</p>
-                    </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-cau-thang.png" alt="">
-                        <p>Cầu thang</p>
-                    </div>
-                    <div class="category-item">
-                        <img src="../images/loai-sp/icon-do-trang-tri.png" alt="">
-                        <p>Đồ trang trí</p>
-                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc-2.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/ke-dau-giuong.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ke-ti-vi.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="highlight">
-                    <h1 class="title">
-                        SẢN PHẨM NỔI BẬT
-                    </h1>
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            PHÒNG NGỦ
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
 
-                    <ul class="highlight-list autoplay" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
                                 <h3>GIƯỜNG CHÂU ÂU</h3>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -114,48 +146,9 @@
                                 <p>8.399.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-2.jpg" alt="">
-                                <h3>BÀN LÀM VIỆC</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p style="color: #a9a9a9">(Size vừa, trắng nâu)</p>
-                                <p>10.999.000 VNĐ</p>
-                            </a>
-                        </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-3.jpg" alt="">
-                                <h3>TỦ QUẦN ÁO</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p style="color: #a9a9a9">(4 ngăn, trắng gỗ)</p>
-                                <p>12.799.000 VNĐ</p>
-                            </a>
-                        </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
-                                <h3>KỆ ĐỂ ĐỒ</h3>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <p style="color: #a9a9a9">(4 ngăn, trắng gỗ)</p>
-                                <p>9.799.000 VNĐ</p>
-                            </a>
-                        </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-1.jpg" alt="">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
                                 <h3>GIƯỜNG CHÂU ÂU</h3>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -166,222 +159,434 @@
                                 <p>8.399.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-2.jpg" alt="">
-                                <h3>BÀN LÀM VIỆC</h3>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
-                                <p style="color: #a9a9a9">(Size vừa, trắng nâu)</p>
-                                <p>10.999.000 VNĐ</p>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-3.jpg" alt="">
-                                <h3>TỦ QUẦN ÁO</h3>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
-                                <p style="color: #a9a9a9">(4 ngăn, trắng gỗ)</p>
-                                <p>12.799.000 VNĐ</p>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
                             </a>
                         </li>
-                        <li class="highlight-item">
-                            <a href="">
-                                <img src="../images/san-pham-noi-bat/sp-4.jpg" alt="">
-                                <h3>KỆ ĐỂ ĐỒ</h3>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            PHÒNG BẾP
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
-                                <p style="color: #a9a9a9">(4 ngăn, trắng gỗ)</p>
-                                <p>9.799.000 VNĐ</p>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            PHÒNG TẮM
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            TRẺ EM
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            VĂN PHÒNG
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            CẦU THANG
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="product">
+                    <div class="product-heading">
+                        <h1 class="title">
+                            GIẢI TRÍ
+                        </h1>
+                        <div class="product-heading__link">
+                            <a href="">XEM TẤT CẢ</a>
+                        </div>
+                    </div>
+
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
+                            </a>
+                        </li>
+                        <li class="product-item">
+                            <a href="#">
+                                <img src="../images/san-pham-noi-bat/phong-khach-ban-uong-nuoc.png" alt="">
+                                <h3>GIƯỜNG CHÂU ÂU</h3>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #a9a9a9">(Size lớn, trắng sữa)</p>
+                                <p>8.399.000 VNĐ</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <!-- END: product -->
-
-        <!-- BEGIN: about-us -->
-        <section class="about-us">
-            <div class="container">
-                <h1 class="title">VỀ CHÚNG TÔI</h1>
-                <div class="about">
-                    <div class="about-img">
-                        <img src="../images/ve-chung-toi/ve-chung-toi.jpg" alt="">
-                    </div>
-
-                    <div class="about-content">
-                        <div>
-                            <h1 style="font-family: 'font-thin';">NỘI THẤT <span
-                                    style="color: #fff; font-family: 'font-ultra';">HOÀNG HOAN</span></h1>
-                            <h1 style="font-family: 'font-thin';">UY TÍN SONG HÀNH CHẤT LƯỢNG</h1><br>
-                            <p style="font-family: 'font-thin'; font-size: 0.8rem;">Có thể chính nhờ vào những kỹ năng
-                                riêng
-                                biệt mang hình
-                                dáng của một vị thần.</p><br>
-                            <p style="font-family: 'font-thin'; font-size: 0.8rem">Có thể chính nhờ vào những kỹ năng
-                                riêng
-                                biệt mang hình
-                                dáng của một vị thần. Chính xác Yasuo
-                                được mệnh danh là thần gió trong Liên Minh Huyền Thoại</p>
-                        </div>
-
-                        <ul>
-                            <li><img src="../images/ve-chung-toi/ve-chung-toi-1.jpg" alt=""></li>
-                            <li><img src="../images/ve-chung-toi/ve-chung-toi-2.jpg" alt=""></li>
-                            <li><img src="../images/ve-chung-toi/ve-chung-toi-3.jpg" alt=""></li>
-                            <li id="see-more-img">
-                                <img src="../images/ve-chung-toi/ve-chung-toi-4.jpg" alt="">
-                                <p id="see-more">Xem thêm &gt;</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="whychoose">
-                    <h1 class="title">TẠI SAO NÊN CHỌN HOÀNG HOAN?</h1>
-
-                    <div class="whychoose-content">
-                        <div class="content-item">
-                            <img src="../images/ve-chung-toi/chinh-sach.jpg" alt="">
-                            <div>
-                                <h2>CHÍNH SÁCH GIÁ</h2>
-                                <p>Tốt nhất và công khai giá trên website</p>
-                            </div>
-                        </div>
-                        <div class="content-item">
-                            <img src="../images/ve-chung-toi/san-pham.jpg" alt="">
-                            <div>
-                                <h2>SẢN XUẤT</h2>
-                                <p>Trực tiếp sản xuất bởi đội ngũ nhân viên hàng đầu</p>
-                            </div>
-                        </div>
-                        <div class="content-item">
-                            <img src="../images/ve-chung-toi/chat-luong.jpg" alt="">
-                            <div>
-                                <h2>CHẤT LƯỢNG</h2>
-                                <p>Cam kết chất lượng sản phẩm và tiến độ thi công</p>
-                            </div>
-                        </div>
-                        <div class="content-item">
-                            <img src="../images/ve-chung-toi/bao-hanh.jpg" alt="">
-                            <div>
-                                <h2>BẢO HÀNH</h2>
-                                <p>Dịch vụ bảo hành sản phẩm tốt nhất khu vực</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END: about-us -->
-
-        <!-- BEGINnews -->
-        <section class="news">
-            <div class="container">
-                <div class="news-main">
-                    <h1 class="title">TIN TỨC</h1>
-
-                    <div class="box">
-                        <div class="news-img">
-                            <img src="../images/tin-tuc/tintuc-1.jpg" alt="">
-                            <div class="img-title">
-                                <h3>Cách chọn sofa cho phòng khách nhà bạn thêm phần sang trọng</h3>
-                                <p>Yasuo Kẻ Bất Dung Thứ, hay The Unforgiven là một nhân vật con người hư cấu, giả
-                                    tưởng,
-                                    kiếm khách Rōnin tự do, không phe phái trong Vũ trụ Liên Minh Huyền Thoại.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="news-content">
-                            <div class="news-item">
-                                <img src="../images/tintuc-2.jpg" alt="">
-                                <div class="item-content">
-                                    <h4>Trang trí phòng khách cho thêm năng động</h4>
-                                    <p>Yasuo Kẻ Bất Dung Thứ, hay The Unforgiven là một nhân vật con người hư cấu, giả
-                                        tưởng,
-                                        kiếm khách Rōnin tự do, không phe phái trong Vũ trụ Liên Minh Huyền Thoại.</p>
-                                </div>
-                            </div>
-
-                            <div class="news-item">
-                                <img src="../images/tintuc-3.jpg" alt="">
-                                <div class="item-content">
-                                    <h4>Cập nhật xu hướng phòng khách phong cách tối giản</h4>
-                                    <p>Yasuo Kẻ Bất Dung Thứ, hay The Unforgiven là một nhân vật con người hư cấu, giả
-                                        tưởng,
-                                        kiếm khách Rōnin tự do, không phe phái trong Vũ trụ Liên Minh Huyền Thoại.</p>
-                                </div>
-                            </div>
-
-                            <div class="news-item">
-                                <img src="../images/tintuc-4.jpg" alt="">
-                                <div class="item-content">
-                                    <h4>Cách sắp xếp vị trí bàn ăn và nhà bếp một cách rộng rãi</h4>
-                                    <p>Yasuo Kẻ Bất Dung Thứ, hay The Unforgiven là một nhân vật con người hư cấu, giả
-                                        tưởng,
-                                        kiếm khách Rōnin tự do, không phe phái trong Vũ trụ Liên Minh Huyền Thoại.</p>
-                                </div>
-                            </div>
-
-                            <div class="xem-them">
-                                <h3>
-                                    XEM THÊM
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="partner">
-                    <h1 class="title">ĐỐI TÁC</h1>
-                    <div class="partner-list">
-                        <img src="../images/doi-tac/vinpearl.png" alt="">
-                        <img src="../images/doi-tac/muong-thanh.png" alt="">
-                        <img src="../images/doi-tac/sheraton.png" alt="">
-                        <img src="../images/doi-tac/the-coffee-house.png" alt="">
-                        <img src="../images/doi-tac/marvella.png" alt="">
-                        <img src="../images/doi-tac/sunrise-sapa.png" alt="">
-                        <img src="../images/doi-tac/melissa.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END: news -->
-
-        <!-- BEGIN contact -->
-        <section class="contact">
-            <div class="container">
-                <img class="contact-img" src="../images/lienhe-1_preview_rev_1.png" alt="">
-
-                <div class="title">
-                    <h3 style="font-family: 'font-thin';">Trải nghiệm dịch vụ</h3>
-                    <h3>cùng Hoàng Hoan ngay</h3>
-                </div>
-
-                <div class="form">
-                    <label for="">Thông tin liên hệ</label><br>
-                    <div class="input">
-                        <input type="text" placeholder="Email/Số điện thoại">
-                        <button type="Submit">Gửi</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- BEGIN contact -->
     </main>
+    <!-- END: main -->
 
     <!-- BEGIN: footer -->
     <footer>
@@ -438,12 +643,43 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.slide-product').slick();
-            $('.autoplay').slick({
+            $('.slide-product').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
             });
         });
 

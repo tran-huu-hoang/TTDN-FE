@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Giới thiệu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,15 +18,16 @@
         <nav>
             <div class="logo">
                 <img src="../images/logo.png" alt="" style="width: 80%">
+                <i class="fa-solid fa-bars" style="display: none;" onclick="handleClickMenu()"></i>
             </div>
 
             <ul class="menu">
-                <li class="menu__item"><a href="../view/index.html">Trang chủ</a></li>
-                <li class="menu__item selected"><a href="../view/gioithieu.html">Giới thiệu</a></li>
-                <li class="menu__item"><a href="#">Sản phẩm</a></li>
-                <li class="menu__item"><a href="#">Tin tức</a></li>
-                <li class="menu__item"><a href="#">Đối tác</a></li>
-                <li class="menu__item"><a href="#">Liên hệ</a></li>
+                <li class="menu__item"><a href="../view/index.html">TRANG CHỦ</a></li>
+                <li class="menu__item selected"><a href="../view/gioithieu.html">GIỚI THIỆU</a></li>
+                <li class="menu__item"><a href="../view/sanpham.html">SẢN PHẨM</a></li>
+                <li class="menu__item"><a href="../view/tintuc.html">TIN TỨC</a></li>
+                <li class="menu__item"><a href="../view/doitac.html">ĐỐI TÁC</a></li>
+                <li class="menu__item"><a href="#">LIÊN HỆ</a></li>
             </ul>
         </nav>
     </header>
@@ -55,7 +56,7 @@
                         <div class="item-text">
                             <p>Nội thất Hoàng Hoan được xây dựng dựa trên tình yêu, đam mê của tôi đối với nghề và khao
                                 khát mang những sản phẩm nội thất đẹp của mình đến với những khách hàng thân yêu.</p>
-                            <p>Cả mộ quá trình từ 1 người thợ phụ rồi được làm thợ chính, tự tạo cho mình 1 phân xưởng
+                            <p>Cả một quá trình từ 1 người thợ phụ rồi được làm thợ chính, tự tạo cho mình 1 phân xưởng
                                 nhỏ dần phát triển và hiện tại Hoàng Hoan đã là 1 trong những công ty có dịch vụ thiết
                                 kế và thi công nội thất uy tín chất lượng với giá cả tốt nhất tại Hà Nội với sứ mệnh
                                 "đem đến cho khách hàng không gian nội thất hoàn hảo".</p>
@@ -181,6 +182,12 @@
         </div>
     </footer>
     <!-- END: footer -->
+
+    <script>
+        const handleClickMenu = () => {
+            document.querySelector('.menu').classList.toggle('response-menu');
+        }
+    </script>
 </body>
 
 </html>

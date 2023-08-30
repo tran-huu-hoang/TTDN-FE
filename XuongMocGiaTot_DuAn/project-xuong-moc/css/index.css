@@ -170,19 +170,18 @@ main .container .highlight .title::after {
     bottom: -0.4rem;
 }
 
-main .container .highlight .highlight-list {
-    width: 90%;
+main .container .highlight ul {
+    /* width: 90%;
     display: flex;
-    align-items: center;
+    align-items: center; */
     margin: auto;
 }
 
-main .container .highlight .highlight-list .highlight-item {
-    width: calc(90%/4);
+main .container .highlight ul .highlight-item {
     margin: 2.5rem 1rem 0 1rem;
 }
 
-.arrow-btn {
+/* .arrow-btn {
     width: 2.5rem;
     height: 2.2rem;
     background-color: #bd945f;
@@ -206,23 +205,24 @@ main .container .highlight .highlight-list .highlight-item {
 .arrow-btn:hover i {
     color: #bbb4b4;
     font-weight: bold;
+} */
+
+main .container .highlight ul .highlight-item a img {
+    width: 95%;
+    margin: 0 auto;
 }
 
-main .container .highlight .highlight-list .highlight-item a img {
-    width: 100%;
-}
-
-main .container .highlight .highlight-list .highlight-item a i {
+main .container .highlight ul .highlight-item a i {
     color: #bd945f;
 }
 
-main .container .highlight .highlight-list .highlight-item a h3,
-main .container .highlight .highlight-list .highlight-item a p {
+main .container .highlight ul .highlight-item a h3,
+main .container .highlight ul .highlight-item a p {
     text-align: center;
     line-height: 1.5rem;
 }
 
-main .container .highlight .highlight-list .highlight-item a h3 {
+main .container .highlight ul .highlight-item a h3 {
     font-family: 'font-ultra';
     color: #2c2e53;
     margin-top: 0.5rem;
@@ -648,6 +648,9 @@ footer .contact ul li:last-child div {
         width: calc(9*100%/12);
     }
 
+
+    /* main */
+
     main .news .container .news-main .box {
         display: block;
     }
@@ -769,10 +772,178 @@ footer .contact ul li:last-child div {
             transform: rotateX(0);
         }
     }
+
+
+    /* main */
+
+    main .about-us .container .about {
+        display: block;
+    }
+
+    main .about-us .container .about .about-img {
+        width: 100%;
+    }
+
+    main .about-us .container .about .about-img img {
+        width: 100%;
+    }
+
+    main .about-us .container .about .about-content {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    main .about-us .container .about .about-content>div {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    main .about-us .container .about ul {
+        margin: 2rem 0;
+    }
+
+    main .about-us .container .about ul li {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    main .about-us .container .about ul li img {
+        width: 90%;
+        height: auto;
+    }
+
+    #see-more {
+        left: 25%;
+    }
+
+    /* footer */
+
+    main .contact .container {
+        padding: 3rem 5rem;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+    * {
+        font-size: 12px;
+    }
+
+    main .banner .container .introduction h1 {
+        font-size: 2rem;
+    }
+
+    main .product .container .category {
+        justify-content: space-evenly;
+    }
+
+    main .product .container .category .category-item {
+        width: calc(100%/3);
+        margin: 1.5rem 0;
+    }
+
+    .whychoose .whychoose-content .content-item {
+        width: 100%;
+    }
+
+    .whychoose .whychoose-content .content-item:first-child,
+    .whychoose .whychoose-content .content-item:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .whychoose .whychoose-content .content-item:last-child,
+    .whychoose .whychoose-content .content-item:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .whychoose .whychoose-content .content-item div {
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    .whychoose .whychoose-content .content-item div p {
+        padding-top: 1rem;
+    }
+
+    main .news .container .news-content .news-item {
+        width: 30%;
+    }
+
+    main .news .container .news-content .news-item img {
+        width: 100%;
+    }
+}
 
 /* // X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+
+    main .contact .container {
+        align-items: flex-end;
+        padding: 1.5rem 3rem;
+    }
+
+    main .banner .container .introduction {
+        text-align: center;
+        font-size: 8px;
+    }
+
+    main .banner .container .introduction p {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    main .product .container .category {
+        margin-top: -3rem;
+    }
+
+    main .product .container .category .category-item {
+        width: 50%;
+    }
+
+    main .contact .container {
+        flex-direction: column;
+    }
+
+    main .contact .container .title {
+        margin: 0;
+    }
+
+    main .contact .container .title ::after {
+        right: 40%;
+        bottom: -20%;
+    }
+
+    main .contact .form {
+        margin-top: 1rem;
+    }
+
+    .contact-img {
+        width: 20%;
+    }
+
+    main .news .container {
+        width: 100%;
+    }
+
+    main .news .container .news-main {
+        padding: 0 1rem;
+    }
+
+
+    /* footer */
+
+    footer .container {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer .container .about-us,
+    footer .container .contact,
+    footer .container .infor {
+        width: calc(100%/3);
+        padding: 1rem;
+    }
+}
