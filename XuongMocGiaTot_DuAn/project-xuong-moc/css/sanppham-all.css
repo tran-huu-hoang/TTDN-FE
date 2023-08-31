@@ -67,6 +67,8 @@ header nav .menu li:hover::after {
 
 /* main */
 
+/* 1. banner  */
+
 main {
     background-color: #f3f3f3;
 }
@@ -104,25 +106,83 @@ main .banner .container .banner-img .banner-content button {
     float: right;
 }
 
+/* 2. menu  */
+
+main .menu {}
+
 main .menu .container {
     width: calc(12*100%/18);
     margin: auto;
-}
-
-main .menu .container .product {
-    background-color: #fff;
-    padding: 3rem 0;
-    margin: 4rem 0;
-}
-
-main .menu .product .product-heading {
-    width: 90%;
-    margin: auto;
+    background-color: #f3f3f3;
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4rem 2rem 1rem 2rem;
+}
+
+main .menu .container .choice {
+    display: flex;
+    width: 60%;
     justify-content: space-between;
 }
 
-main .menu .container .title {
+.sell a {
+    color: #bd945f;
+}
+
+main .menu .container .sapxep {
+    cursor: pointer;
+    position: relative;
+}
+
+main .menu .container .sapxep p,
+main .menu .container .sapxep i {
+    color: #2c2e53;
+}
+
+main .menu .container .sapxep .sapxep-table {
+    position: absolute;
+    width: 10rem;
+    border: 0.2rem solid #bd945f;
+    background-color: #fff;
+    top: 100%;
+    right: -20%;
+    padding: .5rem;
+    display: none;
+}
+
+.un-selected {
+    margin-left: 1.1rem;
+}
+
+main .menu .container .sapxep:hover .sapxep-table {
+    display: block;
+}
+
+main .menu .container .sapxep .sapxep-table i {
+    color: #bd945f;
+}
+
+main .menu .container .sapxep .sapxep-table p {
+    color: #2c2e53;
+}
+
+
+
+/* 3. product */
+
+main .product {
+    padding-bottom: 4rem;
+}
+
+main .product .container {
+    width: calc(12*100%/18);
+    margin: auto;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+main .product .container .title {
     position: relative;
     font-family: 'font-ultra';
     font-size: 1.5rem;
@@ -130,58 +190,71 @@ main .menu .container .title {
     margin: 0 1rem;
 }
 
-main .menu .container .product-heading__link {
-    margin: 0 1rem;
-    display: flex;
-    align-items: flex-end;
-}
-
-main .menu .container .product-heading__link:hover a {
-    color: #bd945f;
-}
-
-main .menu .container .title::after {
+main .product .container .title::after {
     content: "";
     position: absolute;
     background-color: #bd945f;
     left: 0;
-    right: 44%;
+    right: 90%;
     height: 0.4rem;
     bottom: -0.4rem;
 }
 
-main .menu .container .product-list {
-    width: 90%;
+main .product .container .box {
+    width: 100%;
     display: flex;
     align-items: center;
     margin: auto;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
-main .menu .container .product-list .product-item {
-    width: calc(90%/4);
-    margin: 2.5rem 1rem 0 1rem;
+main .product .container .box .product-item {
+    width: 25%;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-main .menu .container .product-list .product-item a img {
-    width: 100%;
+main .product .container .box .product-item a img {
+    width: 90%;
 }
 
-main .menu .container .product-list .product-item a i {
+main .product .container .box .product-item a i {
     color: #bd945f;
 }
 
-main .menu .container .product-list .product-item a h3,
-main .menu .container .product-list .product-item a p {
+main .product .container .box .product-item a h3,
+main .product .container .box .product-item a p {
     text-align: center;
     line-height: 1.5rem;
 }
 
-main .menu .container .product-list .product-item a h3 {
+main .product .container .box .product-item a h3 {
     font-family: 'font-ultra';
     color: #2c2e53;
     margin-top: 0.5rem;
 }
+
+main .product .container .page-number {
+    display: flex;
+    justify-content: center;
+}
+
+main .product .container .page-number .page-number__item {
+    background-color: #ccc;
+    color: #fff;
+    width: 1.5rem;
+    margin: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+main .product .container .page-number .page-number__item:hover {
+    background-color: #bd945f;
+    color: #000;
+}
+
 
 /* footer */
 footer {
@@ -352,6 +425,9 @@ footer .contact ul li:last-child div {
         font-size: 2rem;
     }
 
+    main .product .container .box .product-item {
+        width: calc(100%/3);
+    }
 
     /* footer */
     main .contact .container {
@@ -366,24 +442,14 @@ footer .contact ul li:last-child div {
     }
 
     /* main  */
-
-    main .container {
-        width: 100%;
-    }
-
-    main .menu .container .product-list {
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
-
-    main .menu .container .product-list .product-item {
+    main .product .container .box .product-item {
         width: 50%;
-        margin: 1rem 0;
     }
 
-    main .menu .container .product-list .product-item a img {
-        width: 90%;
+    main .menu .container .choice {
+        width: 70%;
     }
+
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
@@ -395,8 +461,12 @@ footer .contact ul li:last-child div {
         font-size: 1.5rem;
     }
 
-    main .menu .container .product-list .product-item {
+    main .product .container .box .product-item {
         width: 100%;
+    }
+
+    main .menu .container .choice {
+        width: 80%;
     }
 
 

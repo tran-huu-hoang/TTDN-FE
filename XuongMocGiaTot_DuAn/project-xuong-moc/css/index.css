@@ -101,10 +101,13 @@ main .banner .container .introduction p {
 }
 
 main .banner .container .introduction button {
-    color: #fff;
     background-color: #bd945f;
     padding: 1rem 2rem;
     border: none;
+}
+
+main .banner .container .introduction button a {
+    color: #fff;
 }
 
 /* 2. product */

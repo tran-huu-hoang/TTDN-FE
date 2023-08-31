@@ -65,122 +65,104 @@ header nav .menu li:hover::after {
 
 }
 
-/* main */
 
-main {
-    background-color: #f3f3f3;
-}
+/* main  */
 
-main .banner {
-    width: 100%;
-}
+/* banner */
 
-main .banner .container .banner-img {
+
+#banner {
     width: 100%;
     position: relative;
 }
 
-main .banner .container .banner-img img {
+#banner .banner-img {
     width: 100%;
 }
 
-main .banner .container .banner-img .banner-content {
-    position: absolute;
-    left: 60%;
-    top: 20%;
-}
-
-main .banner .container .banner-img .banner-content h2 {
-    color: #2c2e53;
-    font-size: 3rem;
-    font-weight: 100;
-}
-
-main .banner .container .banner-img .banner-content button {
-    color: #2c2e53;
-    border: none;
-    padding: 0.5rem 2rem;
-    margin-top: 1rem;
-    float: right;
-}
-
-main .menu .container {
-    width: calc(12*100%/18);
-    margin: auto;
-}
-
-main .menu .container .product {
-    background-color: #fff;
-    padding: 3rem 0;
-    margin: 4rem 0;
-}
-
-main .menu .product .product-heading {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-main .menu .container .title {
-    position: relative;
-    font-family: 'font-ultra';
-    font-size: 1.5rem;
-    color: #2c2e53;
-    margin: 0 1rem;
-}
-
-main .menu .container .product-heading__link {
-    margin: 0 1rem;
-    display: flex;
-    align-items: flex-end;
-}
-
-main .menu .container .product-heading__link:hover a {
-    color: #bd945f;
-}
-
-main .menu .container .title::after {
-    content: "";
-    position: absolute;
-    background-color: #bd945f;
-    left: 0;
-    right: 44%;
-    height: 0.4rem;
-    bottom: -0.4rem;
-}
-
-main .menu .container .product-list {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-main .menu .container .product-list .product-item {
-    width: calc(90%/4);
-    margin: 2.5rem 1rem 0 1rem;
-    text-align: center;
-}
-
-main .menu .container .product-list .product-item a img {
+#banner .banner-img img {
     width: 100%;
 }
 
-main .menu .container .product-list .product-item a i {
-    color: #bd945f;
-}
-
-main .menu .container .product-list .product-item a h3,
-main .menu .container .product-list .product-item a p {
+#banner .banner-logo {
+    position: absolute;
+    top: 15%;
+    left: 45%;
     text-align: center;
-    line-height: 1.5rem;
 }
 
-main .menu .container .product-list .product-item a h3 {
+#banner .banner-logo img {
+    width: 80%;
+}
+
+#banner .banner-logo h1 {
+    color: #fff;
+    font-size: 2rem;
     font-family: 'font-ultra';
-    color: #2c2e53;
     margin-top: 0.5rem;
+}
+
+
+/* form */
+
+main .form {
+    background-color: #f3f3f3;
+    padding-bottom: 4rem;
+}
+
+main .form .container {
+    width: calc(7*100%/12);
+    margin: auto;
+    padding: 6rem 4rem;
+    background-color: #fff;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+
+main .form .container .form-img {
+    width: 50%;
+}
+
+main .form .container .form-img img {
+    width: 80%;
+    margin: 0 10%;
+}
+
+main .form .container .form-info {
+    width: 50%;
+}
+
+main .form .container .form-info {
+    width: 50%;
+}
+
+main .form .container .form-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+main .form .container .form-info form h2 {
+    color: #bd945f;
+    font-family: 'font-ultra';
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+main .form .container .form-info form .info-text {
+    margin: .5rem 0;
+    padding: 1rem;
+    border: 0.15rem solid #bd945f;
+}
+
+main .form .container .form-info form #info-button {
+    padding: 1rem;
+    width: 20%;
+    border: none;
+    color: #fff;
+    background-color: #bd945f;
+    margin-top: .5rem;
 }
 
 /* footer */
@@ -247,7 +229,6 @@ footer .contact ul li:last-child div {
 }
 
 
-
 /* responsive */
 
 /* // X-Large devices (large desktops, less than 1400px) */
@@ -261,6 +242,20 @@ footer .contact ul li:last-child div {
         width: calc(9*100%/12);
     }
 
+    /* main  */
+    main .form .container .form-info form h2 {
+        margin-bottom: 0.1rem;
+    }
+
+    main .form .container .form-info form .info-text {
+        margin: 0.4rem 0;
+        padding: 0.7rem;
+    }
+
+    main .form .container .form-info form #info-button {
+        padding: 0.7rem;
+        margin-top: 0.4rem;
+    }
 }
 
 /* // Medium devices (tablets, less than 992px) */
@@ -345,18 +340,38 @@ footer .contact ul li:last-child div {
         }
     }
 
-
     /* main  */
-
-    main .banner .container .banner-img .banner-content h2 {
-        font-size: 2rem;
+    main .form .container {
+        flex-direction: column;
     }
 
+    main .form .container .form-img {
+        width: 100%;
+    }
+
+    main .form .container .form-img img {
+        width: 100%;
+        margin: 0;
+    }
+
+    main .form .container .form-info {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    main .form .container .form-info form {
+        align-items: center;
+    }
+
+    main .form .container .form-info form .info-text {
+        width: 100%;
+    }
 
     /* footer */
     main .contact .container {
         padding: 3rem 5rem;
     }
+
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -365,40 +380,14 @@ footer .contact ul li:last-child div {
         font-size: 12px;
     }
 
-    /* main  */
-
-    main .container {
-        width: 100%;
-    }
-
-    main .menu .container .product-list {
-        flex-wrap: wrap;
-        margin-top: 1rem;
-    }
-
-    main .menu .container .product-list .product-item {
-        width: 50%;
-        margin: 1rem 0;
-    }
-
-    main .menu .container .product-list .product-item a img {
-        width: 90%;
-    }
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
-    /* main  */
-
-    main .banner .container .banner-img .banner-content h2 {
-        font-size: 1.5rem;
+    main .form .container {
+        padding-bottom: 4rem;
     }
-
-    main .menu .container .product-list .product-item {
-        width: 100%;
-    }
-
 
     /* footer */
 
