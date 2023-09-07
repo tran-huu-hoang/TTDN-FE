@@ -1,168 +1,233 @@
 
 
-// 1. Add 
+var studentInfo = [];
 
 
-var studentInfo = {
-    fullName: "",
-    dateBirth: "",
-    gender: "",
-    phoneNumber: "",
-    email: "",
-    address: "",
-    facultyOption: "",
-    classNameOption: "",
-}
-
-// var studentInfo = [
-//     { studentId: "SD01", fullName: "Nguyễn Thành Hưng", className: 0, faculty: 0, adrress: "Hà Nội", phoneNumber: "0989898222", email: "thanh.hung.st302@gmail.com", dateOfBirth: "01-01-2000", gender: 0 },
-//     { studentId: "SD02", fullName: "Trần Hữu Hoàng", className: 2, faculty: 1, adrress: "Hà Nội", phoneNumber: "0123456789", email: "hoang@gmail.com", dateOfBirth: "14-07-2003", gender: 0 },
-// ]
-
-
+// thêm mới thông tin sinh viên
 const handleClickAdd = () => {
-    studentInfo.fullName = document.querySelector('#Name').value;
-    studentInfo.className = document.querySelector('#Class').value;
-    studentInfo.faculty = document.querySelector('#Faculty').value;
-    studentInfo.address = document.querySelector('#Address').value;
-    studentInfo.email = document.querySelector('#Email').value;
-    studentInfo.phoneNumber = document.querySelector('#PhoneNumber').value;
-    studentInfo.dateBirth = document.querySelector('#DateBirth').value;
-    studentInfo.gender = document.querySelector('#Gender').value;
+    var item_studentId = document.querySelector('#ID').value
+    var item_fullName = document.querySelector('#Name').value
+    var item_className = document.querySelector('#Class').value
+    var item_faculty = document.querySelector('#Faculty').value
+    var item_address = document.querySelector('#Address').value
+    var item_phoneNumber = document.querySelector('#PhoneNumber').value
+    var item_email = document.querySelector('#Email').value
+    var item_dateOfBirth = document.querySelector('#DateBirth').value
+    var item_gender = document.querySelector('#Gender').value
 
-
-    var className = "";
-    if (studentInfo.classNameOption == "0") {
-        className = "IT1"
-    }
-    else if (studentInfo.classNameOption == "1") {
-        className = "2"
-    }
-    else if (studentInfo.classNameOption == "2") {
-        className = "3"
-    }
-
-
-    var faculty = "";
-    if (studentInfo.facultyOption == "0") {
-        faculty = "Công nghệ thông tin"
-    }
-    else if (studentInfo.facultyOption == "1") {
-        faculty = "Cơ khí"
-    }
-    else if (studentInfo.facultyOption == "2") {
-        faculty = "Ô tô"
-    }
-    else if (studentInfo.facultyOption == "3") {
-        faculty = "Điện tử"
+    var item = {
+        studentId: item_studentId,
+        fullName: item_fullName,
+        className: item_className,
+        faculty: item_faculty,
+        address: item_address,
+        phoneNumber: item_phoneNumber,
+        email: item_email,
+        dateOfBirth: item_dateOfBirth,
+        gender: item_gender,
     }
 
-    var htmlTbody = `<tr class="align-middle">
-        <th scope="row">2</th>
-        <td>SD02</td>
-        <td>${studentInfo.fullName}</td>
-        <td>${className}</td>
-        <td>${faculty}</td>
-        <td>${studentInfo.address}</td>
-        <td>${studentInfo.phoneNumber}</td>
-        <td>${studentInfo.email}</td>
-        <td class="d-flex justify-content-evenly">
-            <button type="button" class="btn btn-outline-primary btn-details">
-                <i class="bi bi-eye"></i>
-                Details
-            </button>
-            <button type="button" class="btn btn-outline-info btn-update"
-                style="margin:0 0.5rem 0 0.5rem;">
-                <i class="bi bi-arrow-repeat"></i>
-                Update
-            </button>
-            <button type="button" class="btn btn-outline-danger btn-delete" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
-                <i class="bi bi-trash3"></i>
-                Delete
-            </button>
-        </td>
-    </tr>`
+    studentInfo.push(item);
 
-    // studentInfo.map((item, index) => {
-    //     return (
-    //         <tr class="align-middle">
-    //             <th scope="row">${index + 1}</th>
-    //             <td>SD01</td>
-    //             <td>${item.fullName}</td>
-    //             <td>${item.className}</td>
-    //             <td>${item.faculty}</td>
-    //             <td>${item.adrress}</td>
-    //             <td>${item.phoneNumber}</td>
-    //             <td>${item.email}</td>
-    //             <td class="d-flex justify-content-evenly">
-    //                 <button type="button" class="btn btn-outline-primary btn-details">
-    //                     <i class="bi bi-eye"></i>
-    //                     Details
-    //                 </button>
-    //                 <button type="button" class="btn btn-outline-info btn-update"
-    //                     style="margin:0 0.5rem 0 0.5rem;">
-    //                     <i class="bi bi-arrow-repeat"></i>
-    //                     Update
-    //                 </button>
-    //                 <button type="button" class="btn btn-outline-danger btn-delete"
-    //                     data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="">
-    //                     <i class="bi bi-trash3"></i>
-    //                     Delete
-    //                 </button>
-    //             </td>
-    //         </tr>
-    //     )
-    // })
-
-    $("tbody").append(htmlTbody)
+    render(studentInfo)
 
     document.querySelector('.student-details').classList.remove('student-details-show')
 
     $('.btn-details').click(() => {
         $('.student-details').addClass('student-details-show')
 
-        $('.btn-add').css('display', 'none')
-        $('.btn-reset').css('display', 'none')
+        $('.btn-reset').css('display', 'none');
+        $('.btn-add').css('display', 'none');
+        $('.btn-update').css('display', 'none');
     })
+
+    $('.btn-update').click(() => {
+        $('.student-details').removeClass('student-details-show')
+
+        $('.btn-reset').css('display', 'none');
+        $('.btn-add').css('display', 'none');
+        $('.btn-update').css('display', 'block');
+    })
+
+    handleClear();
+
+    // console.log(studentInfo)
 }
 
-// js raw
-// document.querySelector('.add-new').addEventListener('click', () => {
-//     // document.querySelector('.student-details').style.display = "block"
-//     document.querySelector('.student-details').classList.add('student-details-show')
-// })
+const render = (studentInfo) => {
+    var table = ``;
+    for (let i = 0; i < studentInfo.length; i++) {
+        table += `<tr class="align-middle">
+            <th scope="row">${i + 1}</th>
+            <td>${studentInfo[i].studentId}</td>
+            <td>${studentInfo[i].fullName}</td>
+            <td>${studentInfo[i].className == "0" ? "IT1" : (studentInfo[i].className == 1 ? "IT2" : "IT3")}</td>
+            <td>${studentInfo[i].faculty == 0 ? "Công nghệ thông tin" : (studentInfo[i].faculty == 1 ? "Cơ khí" : (studentInfo[i].faculty == 2 ? "Ô tô" : "Điện tử"))}</td>
+            <td>${studentInfo[i].address}</td>
+            <td>${studentInfo[i].phoneNumber}</td>
+            <td>${studentInfo[i].email}</td>
+            <td class="d-flex justify-content-evenly">
+                <button type="button" class="btn btn-outline-primary" onclick="handleDetails(${i})">
+                    <i class="bi bi-eye"></i>
+                    Details
+                </button>
+                <button type="button" class="btn btn-outline-info"
+                    style="margin:0 0.5rem 0 0.5rem;" onclick="handleUpdate(${i})">
+                    <i class="bi bi-arrow-repeat"></i>
+                    Update
+                </button>
+                <button type="button" class="btn btn-outline-danger"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="handleDelete(${i})">
+                    <i class="bi bi-trash3"></i>
+                    Delete
+                </button>
+            </td>
+        </tr>`
+    }
+    document.querySelector('.render').innerHTML = table;
+}
 
+// hàm clear 
+const handleClear = () => {
+    document.getElementById("ID").value = "";
+    document.getElementById("Name").value = "";
+    document.getElementById("DateBirth").value = "";
+    document.getElementById("Gender").value = "-1";
+    document.getElementById("PhoneNumber").value = "";
+    document.getElementById("Email").value = "";
+    document.getElementById("Address").value = "";
+    document.getElementById("Faculty").value = "-1";
+    document.getElementById("Class").value = "-1";
+}
 
-// jquery
+// mở, đóng bảng thêm thông tin sinh viên
 $('.add-new').click(() => {
     $('.student-details').addClass('student-details-show')
+
+    $('.btn-reset').css('display', 'block');
+    $('.btn-add').css('display', 'block');
+    $('.btn-update').css('display', 'none');
 })
 
-document.querySelector('.btn-cancel').addEventListener('click', () => {
-    document.querySelector('.student-details').classList.remove('student-details-show')
+$('.btn-cancel').click(() => {
+    $('.student-details').removeClass('student-details-show')
 
-    $('.btn-add').css('display', 'block')
-    $('.btn-reset').css('display', 'block')
+    document.querySelector('#ID').readOnly = false
+    document.querySelector('#Name').readOnly = false
+    document.querySelector('#Class').disabled = false
+    document.querySelector('#Faculty').disabled = false
+    document.querySelector('#Address').readOnly = false
+    document.querySelector('#PhoneNumber').readOnly = false
+    document.querySelector('#Email').readOnly = false
+    document.querySelector('#DateBirth').readOnly = false
+    document.querySelector('#Gender').disabled = false
+
+    handleClear();
 })
 
-// document.querySelector('.add-new').addEventListener('blur', () => {
-//     document.querySelector('.student-details').classList.remove('student-details-show')
-
-//     document.querySelector('.student-details').addEventListener('click', (e) => {
-//         e.stopPropagation();
-//     })
-// })
+// xem thông tin sinh viên
 
 
-
-// 2. Details 
-
-
-$('.btn-details').click(() => {
+const handleDetails = (id) => {
     $('.student-details').addClass('student-details-show')
 
-    $('.btn-add').css('display', 'none')
-    $('.btn-reset').css('display', 'none')
+    $('.btn-reset').css('display', 'none');
+    $('.btn-add').css('display', 'none');
+    $('.btn-update').css('display', 'none');
+    document.querySelector('#ID').value = studentInfo[id].studentId
+    document.querySelector('#Name').value = studentInfo[id].fullName
+    document.querySelector('#Class').value = studentInfo[id].className
+    document.querySelector('#Faculty').value = studentInfo[id].faculty
+    document.querySelector('#Address').value = studentInfo[id].address
+    document.querySelector('#PhoneNumber').value = studentInfo[id].phoneNumber
+    document.querySelector('#Email').value = studentInfo[id].email
+    document.querySelector('#DateBirth').value = studentInfo[id].dateOfBirth
+    document.querySelector('#Gender').value = studentInfo[id].gender
+
+    // read only
+    document.querySelector('#ID').readOnly = true
+    document.querySelector('#Name').readOnly = true
+    document.querySelector('#Class').disabled = true
+    document.querySelector('#Faculty').disabled = true
+    document.querySelector('#Address').readOnly = true
+    document.querySelector('#PhoneNumber').readOnly = true
+    document.querySelector('#Email').readOnly = true
+    document.querySelector('#DateBirth').readOnly = true
+    document.querySelector('#Gender').disabled = true
+}
+
+// sửa thông tin sinh viên
+
+var idUpdate;
+const handleUpdate = (id) => {
+    $('.student-details').addClass('student-details-show')
+
+    $('.btn-reset').css('display', 'none');
+    $('.btn-add').css('display', 'none');
+    $('.btn-update').css('display', 'block');
+
+    document.querySelector('#ID').value = studentInfo[id].studentId
+    document.querySelector('#Name').value = studentInfo[id].fullName
+    document.querySelector('#Class').value = studentInfo[id].className
+    document.querySelector('#Faculty').value = studentInfo[id].faculty
+    document.querySelector('#Address').value = studentInfo[id].address
+    document.querySelector('#PhoneNumber').value = studentInfo[id].phoneNumber
+    document.querySelector('#Email').value = studentInfo[id].email
+    document.querySelector('#DateBirth').value = studentInfo[id].dateOfBirth
+    document.querySelector('#Gender').value = studentInfo[id].gender
+    idUpdate = id;
+}
+
+$('.btn-update').click(() => {
+    studentInfo[idUpdate].studentId = document.querySelector('#ID').value
+    studentInfo[idUpdate].fullName = document.querySelector('#Name').value
+    studentInfo[idUpdate].className = document.querySelector('#Class').value
+    studentInfo[idUpdate].faculty = document.querySelector('#Faculty').value
+    studentInfo[idUpdate].address = document.querySelector('#Address').value
+    studentInfo[idUpdate].phoneNumber = document.querySelector('#PhoneNumber').value
+    studentInfo[idUpdate].email = document.querySelector('#Email').value
+    studentInfo[idUpdate].dateOfBirth = document.querySelector('#DateBirth').value
+    studentInfo[idUpdate].gender = document.querySelector('#Gender').value
+    $(".student-details").removeClass("student-details-show")
+    render(studentInfo);
 })
 
+
+// xóa thông tin sinh viên
+const handleDelete = (id) => {
+    var checkDelete = confirm('Bạn có muốn xóa ko?')
+    if (checkDelete) {
+        studentInfo.splice(id, 1);
+        render(studentInfo);
+    }
+}
+
+// tìm kiếm
+$('.btn-search').click(() => {
+    var studentInfoSearch = [];
+    var string = document.querySelector('#keyword').value;
+    if (document.querySelector('#filter').value == "0") {
+        for (let i = 0; i < studentInfo.length; i++) {
+            if (studentInfo[i].fullName.toLowerCase().includes(string.toLowerCase())) {
+                studentInfoSearch.push(studentInfo[i])
+            }
+        }
+    }
+    else if (document.querySelector('#filter').value == "1") {
+        for (let i = 0; i < studentInfo.length; i++) {
+            if (studentInfo[i].studentId.toLowerCase().includes(string.toLowerCase())) {
+                studentInfoSearch.push(studentInfo[i])
+            }
+        }
+    }
+    else if (document.querySelector('#filter').value == "2") {
+        for (let i = 0; i < studentInfo.length; i++) {
+            var stringClass = studentInfo[i].className == "0" ? "IT1" : (studentInfo[i].className == 1 ? "IT2" : "IT3")
+            if (stringClass.toLowerCase().includes(string.toLowerCase())) {
+                studentInfoSearch.push(studentInfo[i])
+            }
+        }
+    }
+
+    render(studentInfoSearch)
+})
