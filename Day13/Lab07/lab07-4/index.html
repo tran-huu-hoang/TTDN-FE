@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .clearfix {
+        clear: both;
+        overflow: hidden;
+    }
+
+    #main ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #main ul li {
+        float: left;
+        margin-right: 5px;
+    }
+
+    #main ul li a {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        padding: 8px 20px;
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        text-decoration: none;
+        background-color: #d2d3d5;
+        color: #000;
+    }
+
+    .selected {
+        border-bottom: 1px solid #fff;
+        background-color: #782a90 !important;
+        color: #fff !important;
+    }
+
+    #content {
+        border: 1px solid #ccc;
+        width: 500px;
+        height: 300px;
+        margin-top: -1px;
+        padding: 5px 10px;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <ul class="clearfix">
+            <li><a href="#" class="selected" id="html">HTML</a></li>
+            <li><a href="#" id="css">CSS</a></li>
+            <li><a href="#" id="jquery">JQUERY</a></li>
+            <li><a href="#" id="php">PHP</a></li>
+        </ul>
+    </div>
+    <div id="content">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('#content').load("tabs/html.html")
+            $('#main ul li a').click((e) => {
+                $('a').removeClass("selected")
+                var id = e.target.id
+                $('#' + id).addClass("selected")
+                $('#content').load("tabs/" + id + ".html")
+            })
+        })
+    </script>
+</body>
+
+</html>

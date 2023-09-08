@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #box {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        padding: 1rem 2rem;
+        border: 1px solid #ccc;
+        margin: 1rem;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .maudo {
+        color: red
+    }
+
+    .mauxanh {
+        color: blue
+    }
+
+    .mauvang {
+        color: yellow
+    }
+
+    .maughi {
+        color: gray
+    }
+
+    .mautim {
+        color: purple
+    }
+</style>
+
+<body>
+    <div id="box">
+        <h1>Chọn màu chữ</h1>
+
+        <ul>
+            <li><a href="#" id="maudo">Đỏ</a></li>
+            <li><a href="#" id="mauxanh">Xanh</a></li>
+            <li><a href="#" id="mauvang">Vàng</a></li>
+            <li><a href="#" id="maughi">Ghi</a></li>
+            <li><a href="#" id="mautim">Tím</a></li>
+        </ul>
+
+        <h1 id="text">Lập trình web với PHP</h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('a').click((e) => {
+                var color = e.target.id;
+                $('#text').addClass(color)
+            })
+        })
+    </script>
+</body>
+
+</html>

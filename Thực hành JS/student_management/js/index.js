@@ -1,7 +1,5 @@
 
-
 var studentInfo = [];
-
 
 // thêm mới thông tin sinh viên
 const handleClickAdd = () => {
@@ -126,8 +124,6 @@ $('.btn-cancel').click(() => {
 })
 
 // xem thông tin sinh viên
-
-
 const handleDetails = (id) => {
     $('.student-details').addClass('student-details-show')
 
@@ -157,7 +153,6 @@ const handleDetails = (id) => {
 }
 
 // sửa thông tin sinh viên
-
 var idUpdate;
 const handleUpdate = (id) => {
     $('.student-details').addClass('student-details-show')
@@ -191,7 +186,6 @@ $('.btn-update').click(() => {
     $(".student-details").removeClass("student-details-show")
     render(studentInfo);
 })
-
 
 // xóa thông tin sinh viên
 const handleDelete = (id) => {

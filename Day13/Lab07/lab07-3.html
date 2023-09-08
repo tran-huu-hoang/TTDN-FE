@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .main {
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .main #img {
+        width: 100%;
+    }
+
+    .main #img img {
+        width: 100%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-right: 2px;
+        float: left;
+    }
+
+    a img {
+        width: 160px;
+        border: solid 2px #ccc;
+    }
+
+    .active {
+        border: solid 4px !important;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div id="img">
+            <img id="thumb-img" src="../Lab07/img/anh1.jfif" alt="">
+        </div>
+        <div id="thum">
+            <ul>
+                <li><a href="#"><img class="small-img" src="../Lab07/img/anh1.jfif" alt=""></a></li>
+                <li><a href="#"><img class="small-img" src="../Lab07/img/anh2.jfif" alt=""></a></li>
+                <li><a href="#"><img class="small-img" src="../Lab07/img/anh3.jfif" alt=""></a></li>
+                <li><a href="#"><img class="small-img" src="../Lab07/img/anh4.jfif" alt=""></a></li>
+                <li><a href="#"><img class="small-img" src="../Lab07/img/anh5.jfif" alt=""></a></li>
+                <li><a href="#"><img class="small-img" src="../Lab07/img/anh7.jfif" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('.small-img').click((e) => {
+                var imgLink = e.target.src
+                $('#thumb-img').attr("src", imgLink)
+            })
+        })
+    </script>
+</body>
+
+</html>
