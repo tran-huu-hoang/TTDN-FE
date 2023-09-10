@@ -39,16 +39,16 @@ const clear = () => {
 }
 
 // hàm render 
-const render = () => {
+const render = (arr) => {
     var table = "";
 
-    for (let i = 0; i < students.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         table += `<tr>
     <td>${i + 1}</td>
-    <td>${students[i].studentId}</td>
-    <td>${students[i].studentName}</td>
-    <td>${students[i].age}</td>
-    <td>${students[i].sex == 0 ? "Nam" : "Nữ"}</td>
+    <td>${arr[i].studentId}</td>
+    <td>${arr[i].studentName}</td>
+    <td>${arr[i].age}</td>
+    <td>${arr[i].sex == 0 ? "Nam" : "Nữ"}</td>
     <td>
         <div class="template-demo">
             <button type="button" class="btn btn-danger btn-icon-text" onclick="handleDetails(${i})">
@@ -68,7 +68,7 @@ const render = () => {
 }
 
 // hiển thị thông tin
-render()
+render(students)
 
 // thêm
 $('.submit-add').click(() => {
@@ -91,7 +91,7 @@ $('.submit-add').click(() => {
     }
 
     students.push(item);
-    render()
+    render(students)
     clear()
 })
 
@@ -154,7 +154,7 @@ $('.submit-update').click(() => {
     students[updateId].birthDate = $('#birthDate').val()
     students[updateId].birthPlace = $('#birthPlace').val()
     students[updateId].adrress = $('#adrress').val()
-    render()
+    render(students)
 })
 
 // xóa
@@ -162,6 +162,21 @@ const handleDelete = (id) => {
     var checkDelete = confirm("Bạn có muốn xóa không?")
     if (checkDelete) {
         students.splice(id, 1)
-        render()
+        render(students)
     }
 }
+
+// tìm kiếm
+$('#btn-search').click(() => {
+    var arrSearch = [];
+    var string = $('#keyword').val();
+    console.log(string)
+
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].studentName.toLowerCase().includes(string.toLowerCase())) {
+            arrSearch.push(students[i])
+        }
+    }
+    console.log(arrSearch)
+    render(arrSearch)
+})

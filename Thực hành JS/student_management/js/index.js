@@ -1,5 +1,43 @@
 
-var studentInfo = [];
+var studentInfo = [
+    { studentId: "SD001", fullName: "Trần Hữu Hoàng", className: 0, faculty: 1, address: "Hà nội", phoneNumber: "123456789", email: "hoang@gmail.com", dateOfBirth: "2003-07-14", gender: 0 },
+    { studentId: "SD002", fullName: "Nguyễn Thị A", className: 2, faculty: 3, address: "Đà Nẵng", phoneNumber: "000000000", email: "123@gmail.com", dateOfBirth: "2000-02-03", gender: 1 },
+];
+
+const render = (arr) => {
+    var table = ``;
+    for (let i = 0; i < arr.length; i++) {
+        table += `<tr class="align-middle">
+            <th scope="row">${i + 1}</th>
+            <td>${arr[i].studentId}</td>
+            <td>${arr[i].fullName}</td>
+            <td>${arr[i].className == "0" ? "IT1" : (arr[i].className == 1 ? "IT2" : "IT3")}</td>
+            <td>${arr[i].faculty == 0 ? "Công nghệ thông tin" : (arr[i].faculty == 1 ? "Cơ khí" : (arr[i].faculty == 2 ? "Ô tô" : "Điện tử"))}</td>
+            <td>${arr[i].address}</td>
+            <td>${arr[i].phoneNumber}</td>
+            <td>${arr[i].email}</td>
+            <td class="d-flex justify-content-evenly">
+                <button type="button" class="btn btn-outline-primary" onclick="handleDetails(${i})">
+                    <i class="bi bi-eye"></i>
+                    Details
+                </button>
+                <button type="button" class="btn btn-outline-info"
+                    style="margin:0 0.5rem 0 0.5rem;" onclick="handleUpdate(${i})">
+                    <i class="bi bi-arrow-repeat"></i>
+                    Update
+                </button>
+                <button type="button" class="btn btn-outline-danger"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="handleDelete(${i})">
+                    <i class="bi bi-trash3"></i>
+                    Delete
+                </button>
+            </td>
+        </tr>`
+    }
+    document.querySelector('.render').innerHTML = table;
+}
+
+render(studentInfo)
 
 // thêm mới thông tin sinh viên
 const handleClickAdd = () => {
@@ -52,38 +90,7 @@ const handleClickAdd = () => {
     // console.log(studentInfo)
 }
 
-const render = (studentInfo) => {
-    var table = ``;
-    for (let i = 0; i < studentInfo.length; i++) {
-        table += `<tr class="align-middle">
-            <th scope="row">${i + 1}</th>
-            <td>${studentInfo[i].studentId}</td>
-            <td>${studentInfo[i].fullName}</td>
-            <td>${studentInfo[i].className == "0" ? "IT1" : (studentInfo[i].className == 1 ? "IT2" : "IT3")}</td>
-            <td>${studentInfo[i].faculty == 0 ? "Công nghệ thông tin" : (studentInfo[i].faculty == 1 ? "Cơ khí" : (studentInfo[i].faculty == 2 ? "Ô tô" : "Điện tử"))}</td>
-            <td>${studentInfo[i].address}</td>
-            <td>${studentInfo[i].phoneNumber}</td>
-            <td>${studentInfo[i].email}</td>
-            <td class="d-flex justify-content-evenly">
-                <button type="button" class="btn btn-outline-primary" onclick="handleDetails(${i})">
-                    <i class="bi bi-eye"></i>
-                    Details
-                </button>
-                <button type="button" class="btn btn-outline-info"
-                    style="margin:0 0.5rem 0 0.5rem;" onclick="handleUpdate(${i})">
-                    <i class="bi bi-arrow-repeat"></i>
-                    Update
-                </button>
-                <button type="button" class="btn btn-outline-danger"
-                    data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="handleDelete(${i})">
-                    <i class="bi bi-trash3"></i>
-                    Delete
-                </button>
-            </td>
-        </tr>`
-    }
-    document.querySelector('.render').innerHTML = table;
-}
+
 
 // hàm clear 
 const handleClear = () => {
