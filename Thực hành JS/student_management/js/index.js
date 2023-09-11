@@ -26,8 +26,7 @@ const render = (arr) => {
                     <i class="bi bi-arrow-repeat"></i>
                     Update
                 </button>
-                <button type="button" class="btn btn-outline-danger"
-                    data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="handleDelete(${i})">
+                <button type="button" class="btn btn-outline-danger btn-delete" data-id = "${i}" onclick="handleDelete(${i})">
                     <i class="bi bi-trash3"></i>
                     Delete
                 </button>
@@ -202,6 +201,13 @@ const handleDelete = (id) => {
         render(studentInfo);
     }
 }
+
+// $('.btn-delete').click(function () {
+//     var deleteID = $(this).data("id");
+//     console.log(deleteID)
+// })
+
+$(document)
 
 // tìm kiếm
 $('.btn-search').click(() => {
