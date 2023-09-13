@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #222;
+    font-family: 'font-medium';
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* header */
+header {
+    border-bottom: 1px solid #ccc;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: calc(12*100%/18);
+    margin: auto;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header nav .menu {
+    display: flex;
+    width: calc(7*100%/12);
+    justify-content: space-between;
+}
+
+header nav .menu li {
+    position: relative;
+}
+
+.selected:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    background-color: #bd945f;
+    height: 0.2rem;
+    width: 2.5rem;
+    border-radius: 0.14rem;
+
+}
+
+header nav .menu li:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    background-color: #bd945f;
+    height: 0.2rem;
+    width: 2.5rem;
+    border-radius: 0.14rem;
+
+}
+
+
+/* main  */
+#banner {
+    background-image: url('../images/doi-tac/doitac-mainvip.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    z-index: 1;
+    position: relative;
+}
+
+#banner img {
+    width: 10%;
+}
+
+#banner h1 {
+    font-family: 'font-ultra';
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+/* content */
+#content {
+    background-color: #f3f3f3;
+    padding-bottom: 5rem;
+}
+
+#content .container {
+    width: calc(12*100%/18);
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 4rem;
+}
+
+#content .container .list-partner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+#content .container .list-partner .partner-item {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+#content .container .list-partner .partner-item img {
+    width: 20%;
+}
+
+#content .container .list-partner .partner-item .text-item {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#content .container .list-partner .partner-item .text-item .title-item {
+    color: #bd945f;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'font-ultra';
+}
+
+#content .container .list-partner .partner-item .text-item .des {
+    color: #2c2e53;
+    margin-top: 1rem;
+}
+
+
+
+
+
+/* footer */
+footer {
+    margin-top: auto;
+    background-color: #363636;
+}
+
+footer .container {
+    display: flex;
+    width: calc(12*100%/18);
+    margin: auto;
+    justify-content: space-between;
+    padding: 1rem;
+    line-height: 1.8rem;
+}
+
+footer li,
+footer a,
+footer .title,
+footer i {
+    color: #fff;
+}
+
+footer a,
+footer li {
+    font-family: 'font-thin';
+}
+
+footer .title {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+footer .title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    height: 0.2rem;
+    width: 5rem;
+}
+
+footer .contact ul li div {
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+footer .contact ul li div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer .contact ul li:first-child {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+footer .contact ul li:last-child div {
+    width: 10rem;
+}
+
+
+
+/* responsive */
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    /* header */
+
+    header nav .menu {
+        width: calc(9*100%/12);
+    }
+
+    /* main  */
+
+    #banner {
+        height: 30rem;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+    /* header */
+
+    header nav {
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+
+    header nav .menu {
+        display: none;
+        background-color: #bd945f;
+    }
+
+    header nav .logo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav .logo img {
+        width: 10% !important;
+        padding: 1rem;
+    }
+
+    header nav {
+        position: relative;
+    }
+
+    header nav .response-menu {
+        display: block;
+        width: 100%;
+        animation: menu .3s ease-in;
+        transform-origin: top center;
+    }
+
+    header nav .response-menu .menu__item {
+        padding: 0.5rem 2rem;
+        animation: item .8s ease-in;
+        transform-origin: top center;
+    }
+
+    header nav .response-menu .menu__item a {
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        display: block;
+        padding: 0.5rem;
+    }
+
+    header nav .response-menu .menu__item:last-child a {
+        border: none;
+    }
+
+    .fa-bars {
+        display: block !important;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
+    @keyframes menu {
+        0% {
+            transform: rotateY(-90deg);
+        }
+
+        100% {
+            transform: rotateY(0);
+        }
+    }
+
+    @keyframes item {
+        0% {
+            transform: rotateX(-90deg);
+        }
+
+        100% {
+            transform: rotateX(0);
+        }
+    }
+
+    /* main  */
+
+    #banner {
+        height: 35rem;
+    }
+
+    /* footer */
+    main .contact .container {
+        padding: 3rem 5rem;
+    }
+
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    * {
+        font-size: 12px;
+    }
+
+    #banner {
+        height: 28rem;
+    }
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    #content .container .list-partner {
+        margin: 0;
+    }
+
+    #content .container .list-partner .partner-item {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    #content .container .list-partner .partner-item img {
+        width: 50%;
+    }
+
+    #content .container .list-partner .partner-item .text-item {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* footer */
+
+    footer .container {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer .container .about-us,
+    footer .container .contact,
+    footer .container .infor {
+        width: calc(100%/3);
+        padding: 1rem;
+    }
+}
