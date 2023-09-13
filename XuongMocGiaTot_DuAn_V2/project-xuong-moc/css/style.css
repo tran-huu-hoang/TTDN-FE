@@ -48,45 +48,11 @@ header .navbar .navbar-menu .menu-item:hover::after {
 
 /* main  */
 
-/* 1.banner */
-.text-gold {
-    color: #bd945f;
-}
-
-.text-blue {
-    color: #343659;
-}
-
-main .banner .img-banner {
-    position: relative;
-}
-
-main .banner .btn-buy {
-    position: absolute;
-    left: 74%;
-    top: 55%;
-}
-
-main .products .title {
-    position: relative;
-}
-
-main .products .title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.2rem;
-    height: 0.35rem;
-    width: 5%;
-    background-color: #bd945f;
-}
-
 
 /* footer */
 footer {
     margin-top: auto;
-    background-color: #2c2e53;
+    background-color: #363636;
 }
 
 footer li,
