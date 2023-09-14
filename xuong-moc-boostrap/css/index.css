@@ -82,6 +82,14 @@ main .products .title::after {
     background-color: #bd945f;
 }
 
+.button-filter {
+    cursor: pointer;
+}
+
+.button-filter:hover {
+    color: #343659;
+}
+
 
 /* footer */
 footer {
