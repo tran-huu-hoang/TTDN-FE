@@ -263,7 +263,7 @@ main .about-us::before {
     height: 100%;
     background-image: url('../images/ve-chung-toi/bg-about-us.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     background-position: top center;
     filter: brightness(20%);
 }
