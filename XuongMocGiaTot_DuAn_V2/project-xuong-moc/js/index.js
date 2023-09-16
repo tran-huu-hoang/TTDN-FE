@@ -336,7 +336,7 @@ const renderInfor = (obj) => {
         htmlStar += `<i class="fa-solid fa-star text-gold"></i>`
     }
 
-    table = `<div class="title h4 text-blue p-2">${obj.productName}</div>
+    table = `<div class="title h4 text-blue p-2 font-ultra">${obj.productName}</div>
         <div class="product-info d-flex">
             <div class="product-slider" style="width: 60%;">
                 <div class="slider-for">
