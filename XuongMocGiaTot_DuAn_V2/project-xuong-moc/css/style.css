@@ -183,7 +183,7 @@ main .news .container .news-img .img-title {
     bottom: 35%;
 }
 
-main .banner .btn-buy {
+.btn-muangay {
     position: absolute;
     left: 74%;
     top: 55%;
@@ -315,6 +315,27 @@ main .banner-gioithieu {
     background-color: #bd945f;
     height: 0.3rem;
     width: 20%;
+}
+
+.title-v4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5%;
+    background-color: #bd945f;
+    height: 0.5rem;
+    width: 60%;
+}
+
+main .banner .container .banner-img {
+    width: 100%;
+    position: relative;
+}
+
+main .banner .container .banner-img .banner-content {
+    position: absolute;
+    left: 60%;
+    top: 20%;
 }
 
 /* footer */
