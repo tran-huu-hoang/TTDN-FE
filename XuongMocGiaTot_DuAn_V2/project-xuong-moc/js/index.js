@@ -26,25 +26,25 @@ var products = [
     // { img: "../images/xemtatca_sanpham/sp9.png", productName: "BÀN UỐNG NƯỚC", rate: 5, decription: "(Size vừa, nâu đậm)", price: "8.999.000 VNĐ" },
 ];
 
-products.push(addProducts("../images/xemtatca_sanpham/sp1.png", "BÀN UỐNG NƯỚC 1", 5, "(Size vừa, nâu đậm)", 8999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp2.png", "BÀN UỐNG NƯỚC 2", 4, "(Size to, nâu nhạt)", 7999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp3.png", "KỆ TV", 2, "(Size vừa, nâu đậm)", 12999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp4.png", "TỦ ĐỒ", 5, "(Size to, trắng)", 5999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp5.png", "SOFA 1", 1, "(Size to, Ghi đậm)", 15999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp6.png", "SOFA 2", 4, "(Size vừa, xanh đậm)", 3999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp7.png", "BÀN UỐNG TRÀ", 3, "(Size nhỏ, nâu nhạt)", 4999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp8.png", "BÀN PHÒNG KHÁCH", 2, "(Size vừa, nâu đậm)", 12999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp9.png", "BÀN UỐNG NƯỚC", 4, "(Size vừa, nâu đậm)", 24999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp10.png", "BÀN UỐNG NƯỚC", 1, "(Size vừa, nâu đậm)", 6999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp11.png", "BÀN UỐNG NƯỚC", 2, "(Size vừa, nâu đậm)", 7999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp12.png", "BÀN UỐNG NƯỚC", 3, "(Size vừa, nâu đậm)", 8999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp1.png", "BÀN UỐNG NƯỚC", 2, "(Size vừa, nâu đậm)", 9999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp2.png", "BÀN UỐNG NƯỚC", 4, "(Size vừa, nâu đậm)", 3999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp3.png", "BÀN UỐNG NƯỚC", 5, "(Size vừa, nâu đậm)", 7999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp4.png", "BÀN UỐNG NƯỚC", 2, "(Size vừa, nâu đậm)", 8999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp5.png", "BÀN UỐNG NƯỚC", 1, "(Size vừa, nâu đậm)", 12999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp6.png", "BÀN UỐNG NƯỚC", 5, "(Size vừa, nâu đậm)", 8999000))
-products.push(addProducts("../images/xemtatca_sanpham/sp7.png", "BÀN UỐNG NƯỚC", 4, "(Size vừa, nâu đậm)", 6999000))
+products.push(addProducts(["sp1.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC 1", 5, "(Size vừa, nâu đậm)", 8999000))
+products.push(addProducts(["sp2.png", "sp5.png", "sp6.png", "sp7.png", "sp8.png"], "BÀN UỐNG NƯỚC 2", 4, "(Size to, nâu nhạt)", 7999000))
+products.push(addProducts(["sp3.png", "sp9.png", "sp10.png", "sp11.png", "sp12.png"], "KỆ TV", 2, "(Size vừa, nâu đậm)", 12999000))
+products.push(addProducts(["sp4.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "TỦ ĐỒ", 5, "(Size to, trắng)", 5999000))
+products.push(addProducts(["sp5.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "SOFA 1", 1, "(Size to, Ghi đậm)", 15999000))
+products.push(addProducts(["sp6.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "SOFA 2", 4, "(Size vừa, xanh đậm)", 3999000))
+products.push(addProducts(["sp7.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG TRÀ", 3, "(Size nhỏ, nâu nhạt)", 4999000))
+products.push(addProducts(["sp8.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN PHÒNG KHÁCH", 2, "(Size vừa, nâu đậm)", 12999000))
+products.push(addProducts(["sp9.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 4, "(Size vừa, nâu đậm)", 24999000))
+products.push(addProducts(["sp10.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 1, "(Size vừa, nâu đậm)", 6999000))
+products.push(addProducts(["sp11.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 2, "(Size vừa, nâu đậm)", 7999000))
+products.push(addProducts(["sp12.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 3, "(Size vừa, nâu đậm)", 8999000))
+products.push(addProducts(["sp1.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 2, "(Size vừa, nâu đậm)", 9999000))
+products.push(addProducts(["sp2.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 4, "(Size vừa, nâu đậm)", 3999000))
+products.push(addProducts(["sp3.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 5, "(Size vừa, nâu đậm)", 7999000))
+products.push(addProducts(["sp4.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 2, "(Size vừa, nâu đậm)", 8999000))
+products.push(addProducts(["sp5.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 1, "(Size vừa, nâu đậm)", 12999000))
+products.push(addProducts(["sp6.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 5, "(Size vừa, nâu đậm)", 8999000))
+products.push(addProducts(["sp7.png", "sp2.png", "sp3.png", "sp4.png", "sp5.png"], "BÀN UỐNG NƯỚC", 4, "(Size vừa, nâu đậm)", 6999000))
 
 function addProducts(img, productName, rate, decription, price) {
     return {
@@ -72,7 +72,7 @@ const render = (arr) => {
 
         table += `<div class="col-md-3 mt-4 col-sm-6 btn-modal" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${i}">
     <div class="card">
-        <img src="${arr[i].img}" alt="" class="card-img-top">
+        <img src="../images/xemtatca_sanpham/${arr[i].img[0]}" alt="" class="card-img-top">
         <div class="card-body">
             <h5 class="card-title text-blue text-center">${arr[i].productName}</h5>
             <span class="d-block text-center">
@@ -341,41 +341,41 @@ const renderInfor = (obj) => {
             <div class="product-slider" style="width: 60%;">
                 <div class="slider-for">
                     <div class="img-box p-2">
-                        <img src="${obj.img}" alt="" class="w-100"
+                        <img src="../images/xemtatca_sanpham/${obj.img[0]}" alt="" class="w-100"
                             style="height: 25rem">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp2.png" alt="" class="w-100"
+                        <img src="../images/xemtatca_sanpham/${obj.img[1]}" alt="" class="w-100"
                             style="height: 25rem">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp3.png" alt="" class="w-100"
+                        <img src="../images/xemtatca_sanpham/${obj.img[2]}" alt="" class="w-100"
                             style="height: 25rem">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp4.png" alt="" class="w-100"
+                        <img src="../images/xemtatca_sanpham/${obj.img[3]}" alt="" class="w-100"
                             style="height: 25rem">
-                    </div>
-                    <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp5.png" alt="" class="w-100"
-                            style="height: 25rem">
-                    </div>
+                        </div>
+                        <div class="img-box p-2">
+                            <img src="../images/xemtatca_sanpham/${obj.img[4]}" alt="" class="w-100"
+                                style="height: 25rem">
+                        </div>
                 </div>
                 <div class="slider-nav">
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp1.png" alt="" class="w-100">
+                        <img src="../images/xemtatca_sanpham/${obj.img[0]}" alt="" class="w-100">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp2.png" alt="" class="w-100">
+                        <img src="../images/xemtatca_sanpham/${obj.img[1]}" alt="" class="w-100">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp3.png" alt="" class="w-100">
+                        <img src="../images/xemtatca_sanpham/${obj.img[2]}" alt="" class="w-100">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp4.png" alt="" class="w-100">
+                        <img src="../images/xemtatca_sanpham/${obj.img[3]}" alt="" class="w-100">
                     </div>
                     <div class="img-box p-2">
-                        <img src="../images/xemtatca_sanpham/sp5.png" alt="" class="w-100">
+                        <img src="../images/xemtatca_sanpham/${obj.img[4]}" alt="" class="w-100">
                     </div>
                 </div>
             </div>
@@ -394,6 +394,7 @@ const renderInfor = (obj) => {
         </div>`
 
     $('#render-modal').html(table)
+
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -409,4 +410,7 @@ const renderInfor = (obj) => {
         arrows: false,
         focusOnSelect: true
     });
+
+    $('.slider-for').slick('refresh');
+    $('.slider-nav').slick('refresh');
 }
